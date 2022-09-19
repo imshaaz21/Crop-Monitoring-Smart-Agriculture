@@ -23,10 +23,7 @@ Most of the farmers use unorganized knowledge, experience, and guess to apply fe
 <img src="https://user-images.githubusercontent.com/77115237/190919428-3022987a-fb9c-4c6d-9885-e8b3af84eaf1.png" width="50%" height = "auto">
 </p>
 <hr/>
-<h3>Prototype of the device</h3>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/77115237/190919698-cc8c26e4-c05f-44e7-b4ec-7b5e78b2c7e6.png" width="50%" height = "auto">
-</p>
+<h3>Time plan</h3>
 
 
 
