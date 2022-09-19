@@ -7,7 +7,7 @@ CS3282 - Industrial Computer Engineering Project
  This project 'Crop Monitoring Smart Agriculture' helps farmers to apply the right amount of fertilizers to the fields. A portable device is proposed to be built in this project to measure the required measurements such as temperature, Humidity, Soil moisture, Electric conductivity of soil, NPK, Rainfall and PH. Rainfall is needed to be fetched from an <a href="https://openweathermap.org" target="_blank">API</a> as this includes a portable device. The <a href="#integration-diagram">integration diagram</a> is shown below. The control of the device and visualization of the measurements are done using an Android Application . Data is transferred from the device to Android application via Bluetooth in JSON format by a well-defined API. 
 </p>
 <p>
-An additonal feature 'Plant leaf disease detection' is employed within the android application to detect and identify the disease of a plan leaf. This detection and identification provides the farmers with the name of the disease, thus necessary actions could be taken. The sensor data will be transmitted to a cloud server through the internet. The system is required to be compact and energy efficient.
+An additional feature 'Plant leaf disease detection' is employed within the android application to detect and identify the disease of a plan leaf. This detection and identification provides the farmers with the name of the disease, thus necessary actions could be taken. The sensor data will be transmitted to a cloud server through the internet. The system is required to be compact and energy efficient.
 </p>
 
 <h3>Integration Diagram</h3>
