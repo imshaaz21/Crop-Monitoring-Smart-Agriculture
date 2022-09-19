@@ -18,12 +18,13 @@ Most of the farmers use unorganized knowledge, experience, and guess to apply fe
 </ul>
 <hr/>
 
-<h3>Connection Diagram</h3>
+<h3>Integration Diagram</h3>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/77115237/190919428-3022987a-fb9c-4c6d-9885-e8b3af84eaf1.png" width="50%" height = "auto">
+  <img src="https://user-images.githubusercontent.com/77115237/190919428-3022987a-fb9c-4c6d-9885-e8b3af84eaf1.png" width="50%" height = "auto">
 </p>
 <hr/>
-<h3>Time plan</h3>
+<h3>Timeline</h3>
+<img src="https://user-images.githubusercontent.com/77115237/191091547-8c6bed8d-6aa8-43f1-9516-c97f614a6077.png" width="100%" height = "auto">
 
 
 
