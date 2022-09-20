@@ -3,6 +3,7 @@ CS3282 - Industrial Computer Engineering Project
 <hr/>
 <img src="https://user-images.githubusercontent.com/77115237/190918463-30444397-b4fa-42d4-a588-f7cb4a0e9d99.png" widh="100%" height ="auto">
 <br/>
+<h3>Introduction</h3>
 <p>
  This project 'Crop Monitoring Smart Agriculture' helps farmers to apply the right amount of fertilizers to the fields. A portable device is proposed to be built in this project to measure the required measurements such as temperature, Humidity, Soil moisture, Electric conductivity of soil, NPK, Rainfall and PH. Rainfall is needed to be fetched from an <a href="https://openweathermap.org" target="_blank">API</a> as this includes a portable device. The <a href="#integration-diagram">integration diagram</a> is shown below. The control of the device and visualization of the measurements are done using an Android Application . Data is transferred from the device to Android application via Bluetooth in JSON format by a well-defined API. 
 </p>
