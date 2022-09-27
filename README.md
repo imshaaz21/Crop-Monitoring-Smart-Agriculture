@@ -90,7 +90,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
 <h3>Materials</h3>
 <table>
   <tr>
-    <td>Crop analysis and prediction<td>
+    <td>Crop analysis and prediction</td>
     <td>https://www.kaggle.com/code/theeyeschico/crop-analysis-and-prediction</td>
   </tr>
 </table>
