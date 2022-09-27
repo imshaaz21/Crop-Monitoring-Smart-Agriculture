@@ -86,7 +86,8 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
   I. Senevirathne, T. Ambegoda, R. Wijesena and I. Perera, "IoT-based Soil Nutrient Analyser using Gaussian Process Regression," 2022 2nd International Conference on Advanced Research in Computing (ICARC), 2022, pp. 7-12, doi: 10.1109/ICARC54489.2022.9754105.<p>
   </li>
 </ul>
-
+<br/>
+<hr/>
 <h3>Materials</h3>
 <table>
   <tr>
