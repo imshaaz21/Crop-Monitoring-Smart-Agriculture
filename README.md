@@ -50,7 +50,9 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
 <hr/>
 <h3>Timeline</h3>
 <img src="https://user-images.githubusercontent.com/77115237/191091547-8c6bed8d-6aa8-43f1-9516-c97f614a6077.png" width="100%" height = "auto">
-<p align="center">
+<br/>
+<hr/>
+<h3>Progess</h3>
  <table>
   <th>Date</th>
   <th>Implimentation</th>
