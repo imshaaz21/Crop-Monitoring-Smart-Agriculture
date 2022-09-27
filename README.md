@@ -79,7 +79,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
  </table>
  <br/>
  <hr/>
-<h3>Refrence</h3>
+<h3>Reference</h3>
 <ul>
  <li>
   <p><b>IoT-based Soil Nutrient Analyser using Gaussian Process Regression</b><br/>
