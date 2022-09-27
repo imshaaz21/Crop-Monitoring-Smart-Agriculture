@@ -98,4 +98,8 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
     <td>Plant Disease Classification - ResNet- 99.2%</td>
     <td>https://www.kaggle.com/code/atharvaingle/plant-disease-classification-resnet-99-2</td>
   </tr>
+  <tr>
+    <td>Measure soil npk values</td>
+    <td>https://www.circuitschools.com/measure-soil-npk-values-using-soil-npk-sensor-with-arduino/</td>
+  </tr>
 </table>
