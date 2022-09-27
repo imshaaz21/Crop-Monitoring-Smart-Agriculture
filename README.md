@@ -93,4 +93,8 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
     <td>Crop analysis and prediction</td>
     <td>https://www.kaggle.com/code/theeyeschico/crop-analysis-and-prediction</td>
   </tr>
+  <tr>
+    <td>Plant Disease Classification - ResNet- 99.2%</td>
+    <td>https://www.kaggle.com/code/atharvaingle/plant-disease-classification-resnet-99-2</td>
+  </tr>
 </table>
