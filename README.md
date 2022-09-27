@@ -23,7 +23,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
 <hr/>
 <h3>Procedure</h3>
 <p>This project is mixture of hardware and software components. The hardware part includes the embedded system which programs in Arduino IDE. Arduino Uno is used to build this project. The special sensors used to measure humidity, soil moisture, temperature,ph & soil electric conductivity. LEDs & LCD screen used to indicates the connectivity and the battery level. A bluetooth module is used to communicate with android app. </p>
-
+<br/>
 <table>
  <tr>
   <td>Arduino Uno</td>
@@ -40,13 +40,40 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
    <td><img src="https://user-images.githubusercontent.com/77115237/192483809-f0041020-b8d8-468f-94eb-9dbaad54a8db.png" width="100%" height = "auto"></td>
   <td>The Soil Moisture sensor is used to sense moisture content in the soil. It checks the volume of water content or moisture present in the soil. The calculations are done in the soil moisture sensor through coefficients. It estimates the volume of water content in the soil. It detects the water content in the soil and gets and sends the analog signals which is shown digitally. It transmits the the signals containing information or data or values of the condition of soil to Arduino to futher process it </td>
  </tr>
+ <tr>
+  <td>Bluetooth Module HC-05</td>
+   <td><img src="https://user-images.githubusercontent.com/77115237/192485152-11f5e92e-71ad-4576-958c-2e9d23efd0fd.png" width="100%" height = "auto"></td>
+  <td>This module used to commicate with android app. HC 05 works on serial communication. </td>
+ </tr>
 </table>
-
+<br/>
+<hr/>
 <h3>Timeline</h3>
-
-
-
-
+<img src="https://user-images.githubusercontent.com/77115237/191091547-8c6bed8d-6aa8-43f1-9516-c97f614a6077.png" width="100%" height = "auto">
+<p align="center">
+ <table>
+  <th>Date</th>
+  <th>Implimentation</th>
+  <tr>
+   <td>06/09/2022</td>
+   <td>Project proposal evaluation</td>
+  </tr>
+  <tr>
+   <td>19/09/2022</td>
+   <td>Updated the ReadMe<br>Requirement finalizztion</td>
+  </tr>
+  <tr>
+   <td>27/09/2022</td>
+   <td>
+    <ul>
+     <li>Collected sensors fromSLIoT lab. (Arduino Uno, LCD display, Soil mositure)</li>
+     <li>Learning React Native app developmet</li>
+     <li>Learning deep learning for disease detection</li>
+    </ul>
+   </td>
+  </tr>
+ </table>
+<p>
 
 
 
