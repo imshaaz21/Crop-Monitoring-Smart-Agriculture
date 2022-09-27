@@ -70,7 +70,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
    <td>27/09/2022</td>
    <td>
     <ul>
-     <li>Collected sensors fromSLIoT lab. (Arduino Uno, LCD display, Soil moisture sensor)</li>
+     <li>Collected sensors from SLIoT lab. (Arduino Uno, LCD display, Soil moisture sensor)</li>
      <li>Learning React Native app development</li>
      <li>Learning deep learning for disease detection</li>
     </ul>
