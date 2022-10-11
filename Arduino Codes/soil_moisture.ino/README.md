@@ -19,7 +19,7 @@ For this setup, you will need :
 
 ***
 
-Most soil moisture sensors are designed to estimate soil volumetric water content based on the dielectric constant (soil bulk permittivity) of the soil. The dielectric constant can be thought of as the soil's ability to transmit electricity. The dielectric constant of soil increases as the water content of the soil increases. This response is due to the fact that the dielectric constant of water is much larger than the other soil components, including air. Thus, measurement of the dielectric constant gives a predictable estimation of water content.
+The majority of soil moisture sensors are made to calculate the volumetric water content of the soil based on the soil's bulk permittivity (soil dielectric constant). You might think of the dielectric constant as the electrical conductivity of the soil. As the soil's moisture content rises, so does its dielectric constant. This reaction results from the fact that water has a substantially higher dielectric constant than the other soil constituents, including air. As a result, estimating the water content may be done predictably by measuring the dielectric constant.
 
 ***
 ## Steps
