@@ -48,9 +48,7 @@ void loop() {
 
 ## Demo Video
 
-<p align = "center">
-<video width="200px" height="auto" controls>
-  <source src="../../Asserts/soil_moisture.mp4" type="video/mp4">
-</video>
-</p>
+https://user-images.githubusercontent.com/77115237/195062728-eedcda40-591c-40bc-abb6-4c1adfcdf263.mp4
+
+
 
