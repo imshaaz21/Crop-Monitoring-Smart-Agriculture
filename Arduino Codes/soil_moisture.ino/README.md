@@ -9,7 +9,7 @@
 For this setup, you will need :
   1. Arduino Uno
   2. Soil moisture Sensor
-  3. 
+  
 ***
 
 The majority of soil moisture sensors are made to calculate the volumetric water content of the soil based on the soil's bulk permittivity (soil dielectric constant). You might think of the dielectric constant as the electrical conductivity of the soil. As the soil's moisture content rises, so does its dielectric constant. This reaction results from the fact that water has a substantially higher dielectric constant than the other soil constituents, including air. As a result, estimating the water content may be done predictably by measuring the dielectric constant.
