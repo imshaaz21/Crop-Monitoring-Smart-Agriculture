@@ -38,5 +38,9 @@ On devices list you can long tap to start pairing process. If device is already 
 
 There is implemented simple chat. Client (the Flutter host) connects to selected from bonded devices server in order to exchange data - asynchronously.
 
+## Real Time visualization
+
+![image](https://user-images.githubusercontent.com/77115237/199207253-bc989aa1-75bd-4482-b2ca-3584b2109053.png)
+
 
 
