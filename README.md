@@ -76,6 +76,11 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
     </ul>
    </td>
   </tr>
+  <tr>
+   <td>31/10/2022</td>
+   <td>App Development</td>
+  </tr>
+  <tr>
  </table>
  <br/>
  <hr/>
