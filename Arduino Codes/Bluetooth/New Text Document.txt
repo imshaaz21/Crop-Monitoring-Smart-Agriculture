@@ -1,0 +1,2 @@
+https://create.arduino.cc/projecthub/akshayjoseph666/interfacing-bluetooth-module-hc-05-with-arduino-uno-f5209b
+https://create.arduino.cc/projecthub/electropeak/getting-started-with-hc-05-bluetooth-module-arduino-e0ca81
