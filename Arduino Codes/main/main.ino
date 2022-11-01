@@ -11,6 +11,7 @@ char flag;
 float hum; 
 float temp;
 int moist;
+String data;
 
 void setup() 
 {   
@@ -25,6 +26,7 @@ void loop()
   hum = dht.readHumidity();
   temp= dht.readTemperature();
   moist = analogRead(A0);
+//  data = "{"hum
   if (MyBlue.available()){ 
     flag = MyBlue.read(); 
     Serial.println(flag);
@@ -39,5 +41,6 @@ void loop()
       MyBlue.println(moist);
     }
   }
+   MyBlue.println(hum);
   delay(1000);
 } 
