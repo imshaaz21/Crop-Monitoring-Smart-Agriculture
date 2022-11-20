@@ -77,7 +77,7 @@ class _MainPage extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Bluetooth Serial'),
+        title: Center(child: const Text('Crop Monitoring')),
       ),
       backgroundColor: Color(0xFFffffff),
       body: Container(
@@ -101,40 +101,81 @@ class _MainPage extends State<MainPage> {
                 });
               },
             ),
-            ListTile(
-              title: const Text('Bluetooth status'),
-              subtitle: Text(_bluetoothState.toString()),
-              trailing: IconButton(
-                icon: Icon(Icons.settings),
-                onPressed: () {
-                  FlutterBluetoothSerial.instance.openSettings();
-                },
-              ),
-            ),
-            Divider(),
-            ListTile(title: const Text('Devices discovery and connection')),
-            ListTile(
-              title: ElevatedButton(
-                child: const Text('Connect to paired device to chat'),
-                onPressed: () async {
-                  final BluetoothDevice? selectedDevice =
-                      await Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return SelectBondedDevicePage(checkAvailability: false);
+            SizedBox(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ListTile(
+                    title: const Text('Bluetooth status'),
+                    subtitle: Text(_bluetoothState.toString()),
+                    trailing: IconButton(
+                      icon: Icon(Icons.settings),
+                      onPressed: () {
+                        FlutterBluetoothSerial.instance.openSettings();
                       },
                     ),
-                  );
+                  ),
+                  // ListTile(title: const Text('Devices discovery and connection')),
+                  ListTile(
+                    title: ElevatedButton(
+                      child: const Text('Connect to paired device to chat'),
+                      onPressed: () async {
+                        final BluetoothDevice? selectedDevice =
+                            await Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SelectBondedDevicePage(
+                                  checkAvailability: false);
+                            },
+                          ),
+                        );
 
-                  if (selectedDevice != null) {
-                    print('Connect -> selected ' + selectedDevice.address);
-                    _startChat(context, selectedDevice);
-                  } else {
-                    print('Connect -> no device selected');
-                  }
-                },
+                        if (selectedDevice != null) {
+                          print(
+                              'Connect -> selected ' + selectedDevice.address);
+                          _startChat(context, selectedDevice);
+                        } else {
+                          print('Connect -> no device selected');
+                        }
+                      },
+                    ),
+                  )
+                ],
               ),
             ),
+            // ListTile(
+            //   title: const Text('Bluetooth status'),
+            //   subtitle: Text(_bluetoothState.toString()),
+            //   trailing: IconButton(
+            //     icon: Icon(Icons.settings),
+            //     onPressed: () {
+            //       FlutterBluetoothSerial.instance.openSettings();
+            //     },
+            //   ),
+            // ),
+            // // ListTile(title: const Text('Devices discovery and connection')),
+            // ListTile(
+            //   title: ElevatedButton(
+            //     child: const Text('Connect to paired device to chat'),
+            //     onPressed: () async {
+            //       final BluetoothDevice? selectedDevice =
+            //           await Navigator.of(context).push(
+            //         MaterialPageRoute(
+            //           builder: (context) {
+            //             return SelectBondedDevicePage(checkAvailability: false);
+            //           },
+            //         ),
+            //       );
+
+            //       if (selectedDevice != null) {
+            //         print('Connect -> selected ' + selectedDevice.address);
+            //         _startChat(context, selectedDevice);
+            //       } else {
+            //         print('Connect -> no device selected');
+            //       }
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),

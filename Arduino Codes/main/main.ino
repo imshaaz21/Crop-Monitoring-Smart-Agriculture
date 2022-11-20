@@ -41,6 +41,6 @@ void loop()
       MyBlue.println(moist);
     }
   }
-   MyBlue.println(hum);
+  MyBlue.println(hum);
   delay(1000);
 } 

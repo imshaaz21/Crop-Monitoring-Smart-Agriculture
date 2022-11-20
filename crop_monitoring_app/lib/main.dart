@@ -10,6 +10,7 @@ class ExampleApplication extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MainPage(),
+      theme: ThemeData(primaryColor: Colors.green[800]),
     );
   }
 }

@@ -42,7 +42,7 @@ class _ChatPage extends State<ChatPage> {
     super.initState();
 
     BluetoothConnection.toAddress(widget.server.address).then((_connection) {
-      print('Connected to the device');
+      debugPrint('Connected to the device');
       connection = _connection;
       setState(() {
         isConnecting = false;
@@ -184,7 +184,7 @@ class _ChatPage extends State<ChatPage> {
 
     // Create message if there is new line character
     String dataString = String.fromCharCodes(buffer);
-    debugPrint(dataString);
+    // debugPrint(dataString);
     int index = buffer.indexOf(13);
     if (~index != 0) {
       setState(() {
