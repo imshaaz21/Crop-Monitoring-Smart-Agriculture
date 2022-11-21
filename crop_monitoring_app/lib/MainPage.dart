@@ -59,8 +59,6 @@ class _MainPage extends State<MainPage> {
         .listen((BluetoothState state) {
       setState(() {
         _bluetoothState = state;
-
-        // Discoverable mode is disabled when Bluetooth gets disabled
         _discoverableTimeoutTimer = null;
       });
     });
