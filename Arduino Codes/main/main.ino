@@ -10,7 +10,7 @@ DHT dht(DHTPIN, DHTTYPE);
 char flag;
 float hum; 
 float temp;
-int moist;
+float moist;
 String data;
 
 void setup() 
@@ -20,12 +20,21 @@ void setup()
   dht.begin();
   Serial.println("Device Connected");
 } 
+
+String send(float temp,float hum,float moist)
+{
+  String data;
+  data = String(temp,4)+" "+String(hum,4)+" "+String(moist,4);
+  return data;
+}
+
 void loop() 
 { 
 //  delay(1000);
   hum = dht.readHumidity();
   temp= dht.readTemperature();
   moist = analogRead(A0);
+  Serial.println(temp);
 //  data = "{"hum
   if (MyBlue.available()){ 
     flag = MyBlue.read(); 
@@ -41,6 +50,7 @@ void loop()
       MyBlue.println(moist);
     }
   }
-//  MyBlue.println(hum);
+//  String data = String(hum,4)+" "+String(temp,4)+" "+String(moist,4);
+  MyBlue.println(send(temp,hum,moist));
   delay(1000);
 } 
