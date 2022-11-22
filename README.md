@@ -114,4 +114,8 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
     <td>Measure soil npk values</td>
     <td>https://www.circuitschools.com/measure-soil-npk-values-using-soil-npk-sensor-with-arduino/</td>
   </tr>
+  <tr>
+    <td>Planr disease images</td>
+    <td>https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset</td>
+  </tr>
 </table>
