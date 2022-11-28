@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
-
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 class ChatPage extends StatefulWidget {
   final BluetoothDevice server;
@@ -17,8 +19,64 @@ class ChatPage extends StatefulWidget {
 class _Message {
   int whom;
   String text;
-
   _Message(this.whom, this.text);
+}
+
+class MessageData {
+  String text;
+  MessageData(
+    this.text,
+  );
+
+  static List<String> temperature = List<String>.empty(growable: true);
+  static List<String> soilMoisture = List<String>.empty(growable: true);
+  static List<String> humidity = List<String>.empty(growable: true);
+
+  void setData() {
+    List<String> data = this.text.split(" ");
+    if (temperature.length < 10) {
+      temperature.add(data[0]);
+      humidity.add(data[1]);
+      soilMoisture.add(data[2]);
+    } else {
+      temperature.removeLast();
+      soilMoisture.removeLast();
+      humidity.removeLast();
+      temperature.add(data[0]);
+      humidity.add(data[1]);
+      soilMoisture.add(data[2]);
+    }
+    // data.asMap().forEach((index, value) {
+    //   debugPrint(index.toString() + " " + value);
+    // });
+  }
+
+  static String getTemperature() {
+    double mean = 0;
+    temperature.forEach((element) {
+      mean += double.parse(element);
+    });
+    mean = mean / temperature.length;
+    return mean.toStringAsFixed(2);
+  }
+
+  static String getSoilMoisture() {
+    double mean = 0;
+    soilMoisture.forEach((element) {
+      mean += double.parse(element);
+    });
+    mean = mean / soilMoisture.length;
+    return mean.toStringAsFixed(2);
+  }
+
+  static String getHumidity() {
+    double mean = 0;
+    humidity.forEach((element) {
+      mean += double.parse(element);
+    });
+    mean = mean / humidity.length;
+    return mean.toStringAsFixed(2);
+  }
 }
 
 class _ChatPage extends State<ChatPage> {
@@ -26,7 +84,15 @@ class _ChatPage extends State<ChatPage> {
   BluetoothConnection? connection;
 
   List<_Message> messages = List<_Message>.empty(growable: true);
+  List<String> features = [
+    'Temperature',
+    'Humidity',
+    'Soil Moisture',
+    'Rainfall'
+  ];
   String _messageBuffer = '';
+  late String temp, hum, mosit;
+  late _ChartData chartData_;
 
   final TextEditingController textEditingController =
       new TextEditingController();
@@ -80,47 +146,54 @@ class _ChatPage extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Row> list = messages.map((_message) {
-      return Row(
-        children: <Widget>[
-          Container(
-            child: Text(
-                (text) {
-                  return text == '/shrug' ? '¯\\_(ツ)_/¯' : text;
-                }(_message.text.trim()),
-                style: TextStyle(color: Colors.white)),
-            padding: EdgeInsets.all(12.0),
-            margin: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
-            width: 222.0,
-            decoration: BoxDecoration(
-                color:
-                    _message.whom == clientID ? Colors.blueAccent : Colors.grey,
-                borderRadius: BorderRadius.circular(7.0)),
+    messages.forEach((_message) {
+      MessageData messageData = MessageData(_message.text.trim());
+      // debugPrint(_message.text.trim());
+      messageData.setData();
+    });
+
+    final GridView gridView = GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 5.0,
+        mainAxisSpacing: 5.0,
+      ),
+      itemCount: features.length,
+      itemBuilder: (context, index) {
+        return Container(
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 150, 200, 244),
+            borderRadius: BorderRadius.circular(30),
           ),
-        ],
-        mainAxisAlignment: _message.whom == clientID
-            ? MainAxisAlignment.end
-            : MainAxisAlignment.start,
-      );
-    }).toList();
+          // color: Colors.blue,
+          child: grid(index, features),
+          margin: const EdgeInsets.all(20),
+        );
+      },
+    );
 
     final serverName = widget.server.name ?? "Unknown";
+
     return Scaffold(
       appBar: AppBar(
           title: (isConnecting
-              ? Text('Connecting chat to ' + serverName + '...')
+              ? Text('Connecting to ' + serverName + '...')
               : isConnected
-                  ? Text('Live chat with ' + serverName)
+                  ? Text('Connected with ' + serverName)
                   : Text('Chat log with ' + serverName))),
       body: SafeArea(
         child: Column(
           children: <Widget>[
             Flexible(
-              child: ListView(
+              child: Container(
                   padding: const EdgeInsets.all(12.0),
-                  controller: listScrollController,
-                  children: list),
+                  // controller: listScrollController,
+                  child: gridView),
             ),
+            Divider(),
+            chartContainer("Temperature"),
             Row(
               children: <Widget>[
                 Flexible(
@@ -184,6 +257,7 @@ class _ChatPage extends State<ChatPage> {
 
     // Create message if there is new line character
     String dataString = String.fromCharCodes(buffer);
+    // MessageData messageData;
     // debugPrint(dataString);
     int index = buffer.indexOf(13);
     if (~index != 0) {
@@ -198,6 +272,15 @@ class _ChatPage extends State<ChatPage> {
           ),
         );
         _messageBuffer = dataString.substring(index);
+        // if (backspacesCounter > 0) {
+        //   messageData = MessageData(_messageBuffer.substring(
+        //       0, _messageBuffer.length - backspacesCounter));
+        //   messageData.setData();
+        // } else {
+        //   messageData =
+        //       MessageData(_messageBuffer + dataString.substring(0, index));
+        //   messageData.setData();
+        // }
       });
     } else {
       _messageBuffer = (backspacesCounter > 0
@@ -216,9 +299,9 @@ class _ChatPage extends State<ChatPage> {
         connection!.output.add(Uint8List.fromList(utf8.encode(text)));
         await connection!.output.allSent;
 
-        setState(() {
-          messages.add(_Message(clientID, text));
-        });
+        // setState(() {
+        // messages.add(_Message(clientID, text));
+        // });
 
         Future.delayed(Duration(milliseconds: 333)).then((_) {
           listScrollController.animateTo(
@@ -232,4 +315,75 @@ class _ChatPage extends State<ChatPage> {
       }
     }
   }
+
+  Container chartContainer(String title) {
+    DateTime now = DateTime.now();
+    int counter = 0;
+    List<_ChartData> liveChartData = List<_ChartData>.empty(growable: true);
+    List<String> messageData_ = MessageData.temperature.toList();
+
+    messageData_.forEach((e) {
+      // String time = DateFormat('ss').format(now);
+      if (counter >= 60) {
+        counter = 0;
+      }
+
+      chartData_ = new _ChartData(e.toString(), (counter++).toString());
+      liveChartData.add(
+        chartData_,
+      );
+    });
+    // debugPrint(liveChartData.);
+    // liveChartData.forEach((element) {
+    //   debugPrint(element.val.toString() + " " + element.time.toString());
+    // });
+
+    return Container(
+      child: SfCartesianChart(
+          primaryXAxis: CategoryAxis(),
+          title: ChartTitle(text: title),
+          // legend: Legend(isVisible: true),
+          tooltipBehavior: TooltipBehavior(enable: true),
+          series: <ChartSeries<_ChartData, String>>[
+            LineSeries<_ChartData, String>(
+              dataSource: liveChartData,
+              xValueMapper: (_ChartData data_, _) => data_.time,
+              yValueMapper: (_ChartData data_, _) => double.parse(data_.val),
+              name: 'Celsius',
+              dataLabelSettings: DataLabelSettings(isVisible: false),
+            )
+          ]),
+    );
+  }
+}
+
+class _ChartData {
+  _ChartData(this.val, this.time);
+
+  final String val;
+  final String time;
+}
+
+Center grid(int index, List<String> features) {
+  String featureName = features[index];
+  String val = '0';
+  switch (index) {
+    case 0:
+      String temp = MessageData.getTemperature();
+      val = temp;
+      break;
+    case 1:
+      String hum = MessageData.getHumidity();
+      val = hum;
+      break;
+    case 2:
+      String moist = MessageData.getSoilMoisture();
+      val = moist;
+      break;
+    default:
+      val = "00.00";
+  }
+  return Center(
+    child: Text(featureName + "\n" + val),
+  );
 }
