@@ -40,7 +40,7 @@ There is implemented simple chat. Client (the Flutter host) connects to selected
 
 ## Real Time visualization
 
-<img src="../Asserts/App.jpg">
+<img src="../Asserts/app.jpg">
 
 <img src="../Asserts/app2.jpg">
 
