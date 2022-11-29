@@ -43,5 +43,5 @@ There is implemented simple chat. Client (the Flutter host) connects to selected
 
 <!-- <img src="../Asserts/app.jpg"> -->
 <p align="center">
-<img src="../Asserts/app2.jpg" width="50%" height="auto" >
+<img src="../Asserts/app2.jpg" width="30%" height="auto" >
 </p>
