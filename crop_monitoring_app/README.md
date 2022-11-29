@@ -20,8 +20,9 @@ The plugin (for now) uses Serial Port profile for moving data over RFCOMM, so ma
 #### Screens 
 
 Main screen and options | Simple chat with server  
-<img src="../Asserts/img1_app.jpg" > 
-
+<p align="center">
+<img src="../Asserts/img1_app.jpg" width="50%" height="auto" > 
+</p>
 
 
 ## General
@@ -41,6 +42,6 @@ There is implemented simple chat. Client (the Flutter host) connects to selected
 ## Real Time visualization
 
 <!-- <img src="../Asserts/app.jpg"> -->
-
-<img src="../Asserts/app2.jpg">
-
+<p align="center">
+<img src="../Asserts/app2.jpg" width="50%" height="auto" >
+</p>
