@@ -29,7 +29,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
 <table>
  <tr>
   <td>Arduino Uno</td>
-   <td><img src="https://user-images.githubusercontent.com/77115237/192482471-ee8c8d8f-440c-48fa-9e42-9d28ba3b760b.png" width="200px" height = "200px"></td>
+   <td><img src="https://user-images.githubusercontent.com/77115237/192482471-ee8c8d8f-440c-48fa-9e42-9d28ba3b760b.png" width="100px" height = "100px"></td>
   <td><ul><li>Microcontroller: ATmega328P.</li>
 <li>Operating Voltage: 5V.</li>
 <li>Input Voltage (recommended): 7-12V.</li>
@@ -40,22 +40,25 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
  </tr>
  <tr>
   <td>DHT22 Temperature And Humidity Sensor</td>
-   <td><img src="https://nilambaraelectronics.com/wp-content/uploads/2022/01/AM2302-DHT22-Digital-Temperature-and-Humidity-Sensor-Module.jpg"  width="200px" height = "auto"></td>
+   <td><img src="https://nilambaraelectronics.com/wp-content/uploads/2022/01/AM2302-DHT22-Digital-Temperature-and-Humidity-Sensor-Module.jpg"  width="100px" height = "100px"></td>
   <td>
       <ul><li>Humidity range: 0-100%RH. </li><li>Temperature range: -40~80℃.</li>   <li>  Humidity measurement precision: ±2%RH</li></ul></td>
  </tr>
  <tr>
   <td>Soil Moisture sensor</td>
-   <td><img src="https://user-images.githubusercontent.com/77115237/192483809-f0041020-b8d8-468f-94eb-9dbaad54a8db.png"  width="200px" height = "auto"></td>
-  <td>Soil moisture sensors measure or estimate the amount of water in the soil.</td>
+   <td><img src="https://user-images.githubusercontent.com/77115237/192483809-f0041020-b8d8-468f-94eb-9dbaad54a8db.png"  width="100px" height = "100px"></td>
+  <td><ul><li>Soil moisture sensors measure or estimate the amount of water in the soil.</li></ul></td>
  </tr>
  <tr>
   <td>Bluetooth Module HC-05</td>
-   <td><img src="https://user-images.githubusercontent.com/77115237/192485152-11f5e92e-71ad-4576-958c-2e9d23efd0fd.png"  width="200px" height = "auto"></td>
-  <td>This module used to communicate with android app. HC 05 works on serial communication. </td>
+   <td><img src="https://user-images.githubusercontent.com/77115237/192485152-11f5e92e-71ad-4576-958c-2e9d23efd0fd.png"  width="100px" height = "100px"></td>
+  <td><ul><li>This module used to communicate with android app. HC 05 works on serial communication.</li> </ul></td>
  </tr>
 </table>
 <br/>
+
+
+
 <hr/>
 <h3>Timeline</h3>
 <img src="https://user-images.githubusercontent.com/77115237/191091547-8c6bed8d-6aa8-43f1-9516-c97f614a6077.png" width="100%" height = "auto">
