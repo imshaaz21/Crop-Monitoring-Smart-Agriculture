@@ -2,8 +2,7 @@
 .idea/
 .dart_tool/
 .vscode/
-.zip
-
+*.zip
 
 # Miscellaneous
 *.class
