@@ -4,6 +4,7 @@ CS3282 - Industrial Computer Engineering Project
 
 <hr/>
 <img src="https://user-images.githubusercontent.com/77115237/190918463-30444397-b4fa-42d4-a588-f7cb4a0e9d99.png" width="100%" height ="auto">
+<img src="https://github.com/imshaaz21/Crop-Monitoring-Smart-Agriculture/blob/main/Asserts/index.jpg" width="100%" height ="auto">
 <br/>
 <h3>Introduction</h3>
 <p>
@@ -13,7 +14,6 @@ CS3282 - Industrial Computer Engineering Project
 An additional feature 'Plant leaf disease detection' is employed within the android application to detect and identify the disease of a plan leaf. This detection and identification provides the farmers with the name of the disease, thus necessary actions could be taken. The sensor data will be transmitted to a cloud server through the internet. The system is required to be compact and energy efficient.
 </p>
 
-<img src="https://github.com/imshaaz21/Crop-Monitoring-Smart-Agriculture/blob/main/Asserts/White%20Photo%20Collage%20Morning%20Routine%20Instagram%20Story.png" width="100%" height ="auto">
 
 <h3>Integration Diagram</h3>
 <p align="center">
@@ -22,7 +22,7 @@ An additional feature 'Plant leaf disease detection' is employed within the andr
 
 <h3>Developed Android App</h3>
 <p align="center">
-  <img src="https://github.com/imshaaz21/Crop-Monitoring-Smart-Agriculture/blob/main/Asserts/index.jpg" width="50%" height = "auto">
+  <img src="https://github.com/imshaaz21/Crop-Monitoring-Smart-Agriculture/blob/main/Asserts/White%20Photo%20Collage%20Morning%20Routine%20Instagram%20Story.pn" width="50%" height = "auto">
 </p>
 
 
